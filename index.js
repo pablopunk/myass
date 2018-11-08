@@ -3,7 +3,8 @@ const { red, green } = require('./colors')
 
 const test = {
   ...assert,
-  is: assert.deepStrictEqual
+  is: assert.deepStrictEqual,
+  true: _ => assert(_ === true)
 }
 
 async function Myass (name, fn) {
