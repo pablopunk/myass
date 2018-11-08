@@ -1,5 +1,5 @@
 const assert = require('assert')
-const { red, green } = require('kleur')
+const { red, green } = require('./colors')
 
 const test = {
   ...assert,

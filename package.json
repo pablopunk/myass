@@ -10,9 +10,7 @@
   "contributors": [
     "Pablo Varela <pablovarela182@gmail.com>"
   ],
-  "dependencies": {
-    "kleur": "^2.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "standard": "*"
   },
