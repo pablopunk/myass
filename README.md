@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <i>MY ASSertion library. Magic free.</i>
+  <i>MY ASSertion library. Magic free. 0 Dependencies.</i>
 </p>
 
 <p align="center">
@@ -27,6 +27,7 @@ npm install myass
 
 * Totally synchronous
 * Incredibly lightweight
+* 0 dependencies
 * No fancy features, focus on assertions
 * Simple and beautiful output
 * Fail fast
