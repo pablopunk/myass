@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const { spawn } = require('child_process')
-const { green, red } = require('kleur')
+const { green, red } = require('./colors')
 
 const possibleFiles = [
   'test.js',
