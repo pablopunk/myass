@@ -16,7 +16,7 @@ m('Objects are equal even tho properties are shuffled', async t => {
 })
 
 m('This one throws', async t => {
-  t.throws(() => t.is(1, 1))
+  t.throws(() => t.is(1, 2))
 })
 
 m('This will throw too', async t => {
