@@ -1,0 +1,41 @@
+{
+  "name": "myass",
+  "description": "MY ASSertion library",
+  "version": "1.0.0",
+  "author": "Pablo Varela <pablovarela182@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/pablopunk/myass/issues",
+    "email": "pablovarela182@gmail.com"
+  },
+  "contributors": [
+    "Pablo Varela <pablovarela182@gmail.com>"
+  ],
+  "dependencies": {
+    "kleur": "^2.0.2"
+  },
+  "devDependencies": {
+    "standard": "*"
+  },
+  "homepage": "https://github.com/pablopunk/myass",
+  "keywords": [
+    "ava",
+    "test",
+    "framework",
+    "lightweight",
+    "assertion",
+    "node",
+    "tdd",
+    "npm"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "bin": "cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pablopunk/myass"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "./cli.js"
+  }
+}
