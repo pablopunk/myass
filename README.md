@@ -78,6 +78,9 @@ test('This will throw too', async t => {
 }
 ```
 
+Another cool feature is that `myass` runs tests like a script, so you
+can execute the file directly `node test.js` and it would still work.
+
 
 ## License
 
