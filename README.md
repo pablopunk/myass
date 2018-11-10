@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <i>MY ASSertion library. Magic free. 0 Dependencies.</i>
+  <i>MY ASSertion framework. Magic free. 0 Dependencies.</i>
 </p>
 
 <p align="center">
