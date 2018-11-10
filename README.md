@@ -44,7 +44,7 @@ Create one of this entry points for your tests:
 * `tests/index.js`
 
 ```js
-const test = require('.')
+const test = require('myass')
 
 test('True is equals to true', async t => {
   t.is(true, true)
