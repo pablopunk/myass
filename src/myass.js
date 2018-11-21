@@ -13,7 +13,7 @@ async function Myass (name, fn) {
     console.log(`${green('✔')} ${name}`)
   } catch (err) {
     console.log(`${red('✗')} ${name}`)
-    console.log(`  ${red(err.message)}`)
+    console.log(`  ${red(err.stack)}`)
 
     process.exit(1)
   }
