@@ -11,9 +11,7 @@
     "Pablo Varela <pablovarela182@gmail.com>"
   ],
   "dependencies": {},
-  "devDependencies": {
-    "standard": "*"
-  },
+  "devDependencies": {},
   "homepage": "https://github.com/pablopunk/myass",
   "keywords": [
     "ava",
@@ -26,14 +24,13 @@
     "npm"
   ],
   "license": "MIT",
-  "main": "index.js",
-  "bin": "cli.js",
+  "main": "src/myass.js",
+  "bin": "src/cli.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/pablopunk/myass"
   },
   "scripts": {
-    "lint": "standard",
-    "test": "npm run lint && ./cli.js"
+    "test": "./src/cli.js"
   }
 }
