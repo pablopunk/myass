@@ -15,10 +15,8 @@ let run = false
 possibleFiles.map(fileName => {
   if (fs.existsSync(fileName)) {
     run = true
-    const node = spawn('node', [fileName])
+    const node = spawn('node', [fileName], { stdio: 'inherit' })
 
-    node.stdout.on('data', data => process.stdout.write(data.toString()))
-    node.stderr.on('data', data => process.stdout.write(data.toString()))
     node.on('close', code => {
       code === 0
         ? console.log(green('\nPassed'))
