@@ -16,9 +16,21 @@ m('Objects are equal even tho properties are shuffled', async t => {
 })
 
 m('This one throws', async t => {
-  t.throws(() => t.is(1, 2))
+  t.throws(_ => t.is(1, 2))
 })
 
 m('This will throw too', async t => {
-  t.throws(() => { throw new Error() })
+  t.throws(_ => { throw new Error() })
+})
+
+m('Works with regex', async t => {
+  t.regex('fooHellobar', /hello/i)
+})
+
+m('Works with regex mixing arguments', async t => {
+  t.regex(/hello/i, 'fooHellobar')
+})
+
+m('Throws if no RegExp is present', async t => {
+  t.throws(_ => t.regex('', ''))
 })
