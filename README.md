@@ -16,6 +16,15 @@
   <img src="https://file-vggefwrhbk.now.sh" alt="screenshot">
 </p>
 
+<hr>
+
+* [How to install](#install)
+* [Features](#features)
+* [Usage](#usage)
+* [API](#api)
+
+<hr>
+
 
 ## Install
 
