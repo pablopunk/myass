@@ -34,7 +34,7 @@ npm install myass
 
 ## Usage
 
-You can use all the methods that the native `assert` has ([see docs](https://nodejs.org/api/assert.html)). Also, there are some shortcuts like `is()` to make deep equal assertions.
+You can use all the methods that the native `assert` has ([see docs](https://nodejs.org/api/assert.html)) but there are some [additional functions](#api) available.
 
 Create one of this entry points for your tests:
 
@@ -81,6 +81,52 @@ test('This will throw too', async t => {
 Another cool feature is that `myass` runs tests like a script, so you
 can execute the file directly `node test.js` and it would still work.
 
+## API
+
+The module is a function that takes a name and a test function:
+
+```js
+myass(name, (t) => {})
+```
+
+> name: string
+
+This argument is the name of the test you are about to provide. It will be shown in the output whenever that test fails or succeeds.
+
+> t: object
+
+I named it `t` but you can use whatever name you want for this argument. It contains all the necessary functions to run your assertions. As mentioned, you can use all the available functions in node's `assert` module. *myass* also provides some helpers that makes it easier to code:
+
+### `t.is(value, expected)`
+
+Shortcut for [`deepStrictEqual`](https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message).
+
+```js
+test('Objects are equal', async t => {
+  t.is({ foo: 'bar' }, { foo: 'bar' }) // passes
+})
+```
+
+### `t.true(value)`
+
+Passes if `value` is `true`. Notice that **it has to be true**, not *truthy*.
+
+```js
+test('True is true', async t => {
+  t.true(true) // passes
+})
+```
+
+### `t.regex(value, regex)` or `t.regex(regex, value)`
+
+Checks if given `value` matches the given `regex`.
+
+```js
+test('Matches regex', async t => {
+  t.regex('abcdef', /abcdef/) // passes
+  t.regex(new RegExp('foo'), 'bar') // won't pass
+})
+```
 
 ## License
 
