@@ -11,7 +11,11 @@
     "Pablo Varela <pablovarela182@gmail.com>"
   ],
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "*",
+    "prettier": "*",
+    "pretty-quick": "*"
+  },
   "homepage": "https://github.com/pablopunk/myass",
   "keywords": [
     "ava",
@@ -33,5 +37,15 @@
   "scripts": {
     "test": "./src/cli.js"
   },
-  "types": "typings.d.ts"
+  "types": "typings.d.ts",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2
+  }
 }

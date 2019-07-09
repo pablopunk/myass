@@ -3,7 +3,6 @@
 <p align="center">
   <a href="https://travis-ci.org/pablopunk/myass"><img src="https://img.shields.io/travis/pablopunk/myass.svg" /> </a>
   <a href="https://packagephobia.now.sh/result?p=myass"><img src="https://packagephobia.now.sh/badge?p=myass" alt="Install size"></a>
-  <a href="https://github.com/sindresorhus/xo"><img src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg" /> </a>
   <a href="https://github.com/pablopunk/miny"><img src="https://img.shields.io/badge/made_with-miny-1eced8.svg" /> </a>
   <a href="https://www.npmjs.com/package/myass"><img src="https://img.shields.io/npm/dt/myass.svg" /></a>
 </p>
@@ -18,13 +17,12 @@
 
 <hr>
 
-* [How to install](#install)
-* [Features](#features)
-* [Usage](#usage)
-* [API](#api)
+- [How to install](#install)
+- [Features](#features)
+- [Usage](#usage)
+- [API](#api)
 
 <hr>
-
 
 ## Install
 
@@ -34,12 +32,12 @@ npm install myass
 
 ## Features
 
-* Totally synchronous
-* Incredibly lightweight
-* 0 dependencies
-* No fancy features, focus on assertions
-* Simple and beautiful output
-* Fail fast
+- Totally synchronous
+- Incredibly lightweight
+- 0 dependencies
+- No fancy features, focus on assertions
+- Simple and beautiful output
+- Fail fast
 
 ## Usage
 
@@ -47,10 +45,10 @@ You can use all the methods that the native `assert` has ([see docs](https://nod
 
 Create one of this entry points for your tests:
 
-* `test.js`
-* `tests.js`
-* `test/index.js`
-* `tests/index.js`
+- `test.js`
+- `tests.js`
+- `test/index.js`
+- `tests/index.js`
 
 ```js
 const test = require('myass')
@@ -64,10 +62,7 @@ test('True is never equal to false', async t => {
 })
 
 test('Objects are equal even tho properties are shuffled', async t => {
-  t.is(
-    { foo: 'bar', bar: 'foo' },
-    { bar: 'foo', foo: 'bar' }
-  )
+  t.is({ foo: 'bar', bar: 'foo' }, { bar: 'foo', foo: 'bar' })
 })
 
 test('This one throws', async t => {
@@ -75,7 +70,9 @@ test('This one throws', async t => {
 })
 
 test('This will throw too', async t => {
-  t.throws(() => { throw new Error() })
+  t.throws(() => {
+    throw new Error()
+  })
 })
 ```
 
@@ -95,7 +92,7 @@ can execute the file directly `node test.js` and it would still work.
 The module is a function that takes a name and a test function:
 
 ```js
-myass(name, (t) => {})
+myass(name, t => {})
 ```
 
 > name: string
@@ -104,7 +101,7 @@ This argument is the name of the test you are about to provide. It will be shown
 
 > t: object
 
-I named it `t` but you can use whatever name you want for this argument. It contains all the necessary functions to run your assertions. As mentioned, you can use all the available functions in node's `assert` module. *myass* also provides some helpers that makes it easier to code:
+I named it `t` but you can use whatever name you want for this argument. It contains all the necessary functions to run your assertions. As mentioned, you can use all the available functions in node's `assert` module. _myass_ also provides some helpers that makes it easier to code:
 
 ### `t.is(value, expected)`
 
@@ -118,7 +115,7 @@ test('Objects are equal', async t => {
 
 ### `t.true(value)`
 
-Passes if `value` is `true`. Notice that **it has to be true**, not *truthy*.
+Passes if `value` is `true`. Notice that **it has to be true**, not _truthy_.
 
 ```js
 test('True is true', async t => {
@@ -141,10 +138,8 @@ test('Matches regex', async t => {
 
 MIT
 
-
 ## Author
 
-| ![me](https://gravatar.com/avatar/fa50aeff0ddd6e63273a068b04353d9d?size=100)           |
-| --------------------------------- |
-| [Pablo Varela](https://pablo.life)   |
-
+| ![me](https://gravatar.com/avatar/fa50aeff0ddd6e63273a068b04353d9d?size=100) |
+| ---------------------------------------------------------------------------- |
+| [Pablo Varela](https://pablo.life)                                           |
