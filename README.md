@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://travis-ci.org/pablopunk/myass"><img src="https://img.shields.io/travis/pablopunk/myass.svg" /> </a>
   <a href="https://packagephobia.now.sh/result?p=myass"><img src="https://packagephobia.now.sh/badge?p=myass" alt="Install size"></a>
+  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg" alt="Prettier code"></a>
   <a href="https://github.com/pablopunk/miny"><img src="https://img.shields.io/badge/made_with-miny-1eced8.svg" /> </a>
   <a href="https://www.npmjs.com/package/myass"><img src="https://img.shields.io/npm/dt/myass.svg" /></a>
 </p>
