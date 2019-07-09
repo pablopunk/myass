@@ -90,6 +90,8 @@ can execute the file directly `node test.js` and it would still work.
 
 ## API
 
+> If you use **typescript**, `myass` has typings!
+
 The module is a function that takes a name and a test function:
 
 ```js
