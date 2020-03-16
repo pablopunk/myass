@@ -116,13 +116,16 @@ test('Objects are equal', async t => {
 })
 ```
 
-### `t.true(value)`
+### `t.true(value)` or `t.false(value)`
 
-Passes if `value` is `true`. Notice that **it has to be true**, not _truthy_.
+Passes if `value` is `true` or `false`. Notice that **it has to be true**, not _truthy_.
 
 ```js
 test('True is true', async t => {
   t.true(true) // passes
+})
+test('False is false', async t => {
+  t.false(false) // passes
 })
 ```
 

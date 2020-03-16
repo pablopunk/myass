@@ -5,6 +5,7 @@ const test = {
   ...assert,
   is: assert.deepStrictEqual,
   true: _ => assert(_ === true),
+  false: _ => assert(_ === false),
   regex: (s, r) => {
     if (typeof s === 'string' && r instanceof RegExp) {
       if (s.match(r) === null) {
