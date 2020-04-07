@@ -20,6 +20,7 @@ type AssertionType = {
   // custom methods
   is: (value1: any, value2: any) => void
   true: (value1: any) => void
+  false: (value1: any) => void
   regex: (value1: RegExp | string, value2: RegExp | string) => void
 }
 
