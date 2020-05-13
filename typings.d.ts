@@ -22,6 +22,7 @@ type AssertionType = {
   true: (value1: any) => void
   false: (value1: any) => void
   regex: (value1: RegExp | string, value2: RegExp | string) => void
+  notRegex: (value1: RegExp | string, value2: RegExp | string) => void
 }
 
 declare function MyAss(

@@ -54,23 +54,23 @@ Create one of this entry points for your tests:
 ```js
 const test = require('myass')
 
-test('True is equals to true', async t => {
+test('True is equals to true', async (t) => {
   t.is(true, true)
 })
 
-test('True is never equal to false', async t => {
+test('True is never equal to false', async (t) => {
   t.notEqual(true, false)
 })
 
-test('Objects are equal even tho properties are shuffled', async t => {
+test('Objects are equal even tho properties are shuffled', async (t) => {
   t.is({ foo: 'bar', bar: 'foo' }, { bar: 'foo', foo: 'bar' })
 })
 
-test('This one throws', async t => {
+test('This one throws', async (t) => {
   t.throws(() => t.is(1, 1))
 })
 
-test('This will throw too', async t => {
+test('This will throw too', async (t) => {
   t.throws(() => {
     throw new Error()
   })
@@ -95,7 +95,7 @@ can execute the file directly `node test.js` and it would still work.
 The module is a function that takes a name and a test function:
 
 ```js
-myass(name, t => {})
+myass(name, (t) => {})
 ```
 
 > name: string
@@ -111,7 +111,7 @@ I named it `t` but you can use whatever name you want for this argument. It cont
 Shortcut for [`deepStrictEqual`](https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message).
 
 ```js
-test('Objects are equal', async t => {
+test('Objects are equal', async (t) => {
   t.is({ foo: 'bar' }, { foo: 'bar' }) // passes
 })
 ```
@@ -121,10 +121,10 @@ test('Objects are equal', async t => {
 Passes if `value` is `true` or `false`. Notice that **it has to be true**, not _truthy_.
 
 ```js
-test('True is true', async t => {
+test('True is true', async (t) => {
   t.true(true) // passes
 })
-test('False is false', async t => {
+test('False is false', async (t) => {
   t.false(false) // passes
 })
 ```
@@ -134,11 +134,13 @@ test('False is false', async t => {
 Checks if given `value` matches the given `regex`.
 
 ```js
-test('Matches regex', async t => {
+test('Matches regex', async (t) => {
   t.regex('abcdef', /abcdef/) // passes
   t.regex(new RegExp('foo'), 'bar') // won't pass
 })
 ```
+
+There's also `t.notRegex` to test a string NOT to match a regular expression.
 
 ## License
 
