@@ -25,15 +25,14 @@ const test = {
 }
 
 async function Myass(name, fn) {
-  try {
-    await fn(test)
-    console.log(`${green('✔')} ${name}`)
-  } catch (err) {
-    console.log(`${red('✗')} ${name}`)
-    console.log(`  ${red(err.stack)}`)
+  fn(test)
+    .then(() => console.log(`${green('✔')} ${name}`))
+    .catch((err) => {
+      console.log(`${red('✗')} ${name}`)
+      console.log(`  ${red(err.stack)}`)
 
-    process.exit(1)
-  }
+      process.exit(1)
+    })
 }
 
 module.exports = Myass

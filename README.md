@@ -33,7 +33,7 @@ npm install myass
 
 ## Features
 
-- Totally synchronous
+- Asynchronous
 - Incredibly lightweight
 - 0 dependencies
 - No fancy features, focus on assertions
