@@ -2,13 +2,13 @@
   "name": "myass",
   "description": "MY ASSertion library",
   "version": "2.0.0",
-  "author": "Pablo Varela <pablo.com>",
+  "author": "Pablo Varela <pablo@pablopunk.com>",
   "bugs": {
     "url": "https://github.com/pablopunk/myass/issues",
-    "email": "pablo.com"
+    "email": "pablo@pablopunk.com"
   },
   "contributors": [
-    "Pablo Varela <pablo.com>"
+    "Pablo Varela <pablo@pablopunk.com>"
   ],
   "dependencies": {},
   "devDependencies": {
